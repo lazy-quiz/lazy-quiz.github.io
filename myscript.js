@@ -5,11 +5,17 @@ function mysearch() {
     $("table tbody tr td:nth-child(2)").filter(":not(:contains('" + ($("#search-week").val()) + "'))").parent().hide();
     $("table tbody tr td:nth-child(4)").filter(":not(:contains('" + ($("#search-question").val()) + "'))").parent().hide();
 }
-// $("#search-grade").keyup(search);
-// $("#search-block").keyup(search);
-// $("#search-week").keyup(search);
-// $("#search-question").keyup(search); 
-// keyup();//这句一定要有。
+
+$(document).ready(function () {
+    $("#search-grade").keyup(mysearch);
+    $("#search-block").keyup(mysearch);
+    $("#search-week").keyup(mysearch);
+    $("#search-question").keyup(mysearch);
+    // keyup();//这句一定要有。
+})
+
+
+
 
 
 
