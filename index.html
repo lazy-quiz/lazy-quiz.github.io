@@ -4,83 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script> -->
 
-    <script>
-
-        $(document).ready(function () {
-            // $('#myTable').DataTable();
-
-            // $("#search-block").keyup(function () {
-            //     $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')").show();
-            // }); keyup();//这句一定要有。
-
-            //在每一个footer单元格中添加一个input输入框
-            $('#myTable tfoot th').each(function () {
-                var title = $(this).text();
-                $(this).html('<input type="text" placeholder="Search ' + title + '" />');
-            });
-
-            //获取DataTable对象
-            var table = $('#myTable').DataTable({
-                "searching":true,
-            });
-
-            //根据footer输入框的内容进行搜索
-            // table.columns().every(function () {
-            //     var that = this;
-            //     $('input', this.footer()).on('keyup change', function () {
-            //         if (that.search() !== this.value) {
-            //             that
-            //                 .search(this.value)
-            //                 .draw();
-            //         }
-            //     });
-            // });
-        })
-
-    </script>
-    <title>Document</title>
+    <title>Quiz</title>
 </head>
 
 <body>
-    <input type="text" id="search-block" />
-    <table id="myTable">
-        <thead>
-            <tr>
-                <td>模块</td>
-                <td>周</td>
-                <td>问题</td>
-                <td>选项</td>
-                <td>答案</td>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <td>模块</td>
-                <td>周</td>
-                <td>问题</td>
-                <td>选项</td>
-                <td>答案</td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>4</td>
-            </tr>
-        </tbody>
-    </table>
+    <a href="./quiz-b1.html">模块1</a>
+    <br>
+    <a href="./quiz-b2.html">模块2</a>
+    <br>
+    <a href="./quiz-b3.html">模块3</a>
+    <br>
+    <a href="./quiz-b4.html">模块4</a>
+    <br>
+    <a href="./quiz-b5.html">模块5</a>
+    <br>
+    <a href="./quiz-b6.html">模块6</a>
+    <br>
+    <a href="./quiz-b7.html">模块7</a>
+    <br>
+    <a href="./quiz-b8.html">模块8</a>
+    <br>
 
 </body>
 
