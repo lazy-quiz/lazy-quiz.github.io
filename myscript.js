@@ -1,16 +1,33 @@
+function delay(fn, ms) {
+    let timer = 0
+    return function(...args) {
+      clearTimeout(timer)
+      timer = setTimeout(fn.bind(this, ...args), ms || 0)
+    }
+  }
+
 function mysearch() {
+    
     $("table tbody tr").show()
-    $("table tbody tr td:nth-child(3)").filter(":not(:contains('" + ($("#search-grade").val()) + "'))").parent().hide();
-    $("table tbody tr td:nth-child(1)").filter(":not(:contains('" + ($("#search-block").val()) + "'))").parent().hide();
-    $("table tbody tr td:nth-child(2)").filter(":not(:contains('" + ($("#search-week").val()) + "'))").parent().hide();
-    $("table tbody tr td:nth-child(4)").filter(":not(:contains('" + ($("#search-question").val()) + "'))").parent().hide();
+    var grade = $("#search-grade").val()
+    var block = $("#search-block").val()
+    var week = $("#search-week").val()
+    var question = $("#search-question").val()
+    if (grade) {
+    $("table tbody tr td:nth-child(3)").filter(":not(:contains('" + grade + "'))").parent().hide();}
+    if (block) {
+    $("table tbody tr td:nth-child(1)").filter(":not(:contains('" + block + "'))").parent().hide();}
+    if (week) {
+    $("table tbody tr td:nth-child(2)").filter(":not(:contains('" + week + "'))").parent().hide();}
+    if (question) {
+    $("table tbody tr td:nth-child(4)").filter(":not(:contains('" + question + "'))").parent().hide();}
 }
 
 $(document).ready(function () {
-    $("#search-grade").keyup(mysearch);
-    $("#search-block").keyup(mysearch);
-    $("#search-week").keyup(mysearch);
-    $("#search-question").keyup(mysearch);
+    $("#search-grade").keyup(delay(mysearch,500));
+    $("#search-block").keyup(delay(mysearch,500));
+    $("#search-week").keyup(delay(mysearch,500));
+    $("#search-question").keyup(delay(mysearch,500));
     // keyup();//这句一定要有。
 })
 
