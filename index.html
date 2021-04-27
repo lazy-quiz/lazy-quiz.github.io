@@ -36,8 +36,19 @@
     <br>
     <hr>
     <div>
-        推荐使用<a href="https://hypothes.is/">Hypothsis</a>工具实现在线共享标注功能，参考教程：<a href="https://sspai.com/post/63033">开源、可定制的网页批注工具——Hypothesis</a>
+        推荐使用<a href="https://hypothes.is/">Hypothsis</a>工具实现在线共享标注功能
+        <div>
+        简易使用：
+        <ol>
+            <li><a href="https://hypothes.is/signup">注册一个账号</a></li>
+            <li>浏览器添加书签，名称随意，网址填入<code>javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();</code></li>
+            <li>在需要使用的网页点击刚添加书签会在网页右上出现相关工具，登录后即可开始使用，高亮默认个人可见，标注默认公共可见</li>
+        </ol>
+        </div>
+
+        详细教程：<a href="https://sspai.com/post/63033">开源、可定制的网页批注工具——Hypothesis</a>
     </div>
+    <hr>
     <div>Contact: fhzizi@hotmail.com</div>
 
 </body>
