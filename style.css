@@ -5,3 +5,22 @@ code {
     /* padding: 2px; */
     /* font-size: 105%; */
 }
+
+#block-links {
+    text-align: center;
+
+}
+
+#block-links ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 150%;
+}
+
+
+#header-title {
+    font-size: 200%;
+    text-align: center;
+
+}
