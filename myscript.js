@@ -10,13 +10,13 @@ function mysearch() {
     
     $("table tbody tr").show()
     var grade = $("#search-grade").val()
-    var block = $("#search-block").val()
+    // var block = $("#search-block").val()
     var week = $("#search-week").val()
     var question = $("#search-question").val()
     if (grade) {
     $("table tbody tr td:nth-child(3)").filter(":not(:contains('" + grade + "'))").parent().hide();}
-    if (block) {
-    $("table tbody tr td:nth-child(1)").filter(":not(:contains('" + block + "'))").parent().hide();}
+    // if (block) {
+    // $("table tbody tr td:nth-child(1)").filter(":not(:contains('" + block + "'))").parent().hide();}
     if (week) {
     $("table tbody tr td:nth-child(2)").filter(":not(:contains('" + week + "'))").parent().hide();}
     if (question) {
